@@ -1,6 +1,17 @@
 export default {
-'api-forms': {
+  email: {
     enabled: true,
-    resolve: './src/plugins/api-forms'
+    config: {
+      provider: "sendmail",
+      settings: {
+        defaultFrom: "daan@ef2.nl",
+        defaultReplyTo: "daan@ef2.nl",
+        testAddress: "daan@ef2.nl",
+      },
+    },
   },
-}
+  "api-forms": {
+    enabled: true,
+    resolve: "./src/plugins/api-forms",
+  },
+};
